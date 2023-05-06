@@ -3,9 +3,9 @@ import helmet from "helmet"
 import cors from "cors"
 import cookie_parser from "cookie-parser"
 import dotenv from "dotenv"
-import { error_inter } from "./interfaces/error.interface"
 dotenv.config()
 
+import { error_inter } from "./interfaces/error.interface"
 import auth_route from "./routes/auth"
 import { sequelize } from "./utils/db"
 
