@@ -1,4 +1,3 @@
-import { title } from "process"
 import { sequelize } from "../utils/db"
 import { DataTypes } from "sequelize"
 

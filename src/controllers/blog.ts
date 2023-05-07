@@ -35,7 +35,7 @@ export const remove = async (req: Request, res: Response, next: NextFunction) =>
     }
 }
 
-export const getall = async (req: Request, res: Response, next: NextFunction) => {
+export const get_all = async (req: Request, res: Response, next: NextFunction) => {
     try {
         let serach: query = {}
         if (req.query.q) {
@@ -48,7 +48,7 @@ export const getall = async (req: Request, res: Response, next: NextFunction) =>
     }
 }
 
-export const getone = async (req: Request, res: Response, next: NextFunction) => {
+export const get_one = async (req: Request, res: Response, next: NextFunction) => {
     try {
         let data = await Blog.findOne({ where: { blog_id: req.params.id } })
         res.send(data)
