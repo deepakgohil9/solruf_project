@@ -21,6 +21,10 @@ export const User = sequelize.define("user", {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    verified: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+    },
     isadmin: {
         type: DataTypes.BOOLEAN,
         allowNull: false
