@@ -24,6 +24,7 @@ Overall, this project will provide a robust and scalable backend API for a blog 
 *    [x]  The fulltext search was implemented for searching for blogs.
 *    [x]  Email verification.
 *    [x]  Dockerized this application.
+*    [x]  Project deployement.
 
 ### Task accomplished
 
@@ -35,6 +36,7 @@ Overall, this project will provide a robust and scalable backend API for a blog 
 *   [x] Write tests to ensure that the API functions as expected, covering all possible use cases.
 
 ### API Documentation : [https://documenter.getpostman.com/view/19278775/2s93eYTrCs](https://documenter.getpostman.com/view/19278775/2s93eYTrCs)
+### Deployed : [https://solruf-project.onrender.com](https://solruf-project.onrender.com)
 
 ### .env configuration
 
