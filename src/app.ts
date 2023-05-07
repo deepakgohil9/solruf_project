@@ -7,6 +7,7 @@ dotenv.config()
 
 import { error_inter } from "./interfaces/error.interface"
 import auth_route from "./routes/auth"
+import blog_route from "./routes/blog"
 import { sequelize } from "./utils/db"
 
 
@@ -20,6 +21,7 @@ app.use(cookie_parser())
 app.use(express.json())
 
 app.use("/auth", auth_route)
+app.use("/blog", blog_route)
 
 app.use((err: error_inter, req: Request, res: Response, next: NextFunction) => {
     let status_code = err.status_code || 400
