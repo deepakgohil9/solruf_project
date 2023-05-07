@@ -1,7 +1,9 @@
+import fs from "fs"
 import express, { Request, Response, NextFunction } from "express"
 import helmet from "helmet"
 import cors from "cors"
 import cookie_parser from "cookie-parser"
+import morgan from "morgan"
 import dotenv from "dotenv"
 dotenv.config()
 
@@ -12,9 +14,11 @@ import { sequelize } from "./utils/db"
 
 
 const PORT = parseInt(process.env.PORT as string) || 3000
+let accesslog_stream = fs.createWriteStream("./access.log", { flags: 'a' })
 const app = express()
 
 // middlewares
+app.use(morgan("combined", { stream: accesslog_stream }))
 app.use(helmet())
 app.use(cors())
 app.use(cookie_parser())

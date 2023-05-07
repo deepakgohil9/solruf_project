@@ -11,5 +11,6 @@ console.log(port)
 export const sequelize = new Sequelize(database, username, password, {
     dialect: 'mysql',
     host: host,
-    port: port
+    port: port,
+    logging: false
 })
