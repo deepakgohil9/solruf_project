@@ -51,3 +51,8 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
     }
 }
 
+export const logout = (req: Request, res: Response, next: NextFunction) => {
+    res.clearCookie("access_token")
+    res.send({ status: "logout sucessful!" })
+}
+
