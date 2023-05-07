@@ -10,21 +10,21 @@ export const Blog = sequelize.define("blog", {
         primaryKey: true
     },
     title: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     breif: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     article: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     }
 }, {
     indexes: [
         {
-            type:"FULLTEXT",
+            type: "FULLTEXT",
             name: "text_search",
             fields: [
                 "title",
