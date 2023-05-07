@@ -1,3 +1,4 @@
+import { title } from "process"
 import { sequelize } from "../utils/db"
 import { DataTypes } from "sequelize"
 
@@ -20,4 +21,15 @@ export const Blog = sequelize.define("blog", {
         type: DataTypes.STRING,
         allowNull: false,
     }
+}, {
+    indexes: [
+        {
+            type:"FULLTEXT",
+            name: "text_search",
+            fields: [
+                "title",
+                "article"
+            ]
+        }
+    ]
 })
